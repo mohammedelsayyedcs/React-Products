@@ -1,3 +1,7 @@
 a {
     text-decoration: none !important;
 }
+
+.footer {
+    height: 10vh;
+}

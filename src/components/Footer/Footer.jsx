@@ -1,27 +1,28 @@
 import React from "react";
 import "./Footer.css";
+import { NavLink } from "react-router-dom";
 
 export default function Footer() {
     return (
         <div>
             <footer class="py-3 my-4">
 
-                <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+                <ul class="navbar-nav align-items-center d-flex flex-row justify-content-center border-bottom pb-3 mb-3">
 
-                    <li class="nav-item">
-                        <a href="#" class="nav-link px-2 text-body-secondary px-3">
+                    <li class="nav-item px-3">
+                        <NavLink class="nav-link" to={"/"}>
                             Home
-                        </a>
+                        </NavLink>
                     </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link px-2 text-body-secondary px-3">
+                    <li class="nav-item px-3">
+                        <NavLink class="nav-link" to={"/products"}>
                             Products
-                        </a>
+                        </NavLink>
                     </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link px-2 text-body-secondary px-3">
+                    <li class="nav-item px-3">
+                        <NavLink class="nav-link" to={"/contact-us"}>
                             Contact Us
-                        </a>
+                        </NavLink>
                     </li>
                 </ul>
                 <p class="text-center text-body-secondary">© 2025 Products Project, Inc</p>

@@ -3,12 +3,14 @@ import './App.css'
 import Header from './components/Header/Header'
 import '../node_modules/bootstrap/dist/js/bootstrap.min.js'
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
+import Footer from './components/Footer/Footer.jsx'
 
 function App() {
 
   return (
     <>
       <Header />
+      <Footer />
     </>
   )
 }

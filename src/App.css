@@ -1,7 +1,4 @@
-.body{
-    margin-top: 3%;
+.body {
+    padding-top: 3%;
     height: 70vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }

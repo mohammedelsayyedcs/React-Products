@@ -17,7 +17,7 @@ function App() {
     <>
       <Header />
       <Routes>
-        <Route path='/' element={<Home />}></Route>
+        <Route path='/' element={<Home name={'Mohamed'} increaseVal={500} />}></Route>
         <Route path='/products' element={<Products />}></Route>
         <Route path='/contact-us' element={<Contact />}></Route>
         <Route path='*' element={<NotFound />}></Route>

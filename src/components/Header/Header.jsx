@@ -1,5 +1,6 @@
 import React from 'react'
 import './Header.css'
+import { NavLink } from 'react-router-dom'
 
 export default function Header() {
     return (
@@ -13,13 +14,13 @@ export default function Header() {
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
                             <li className="nav-item">
-                                <a className="nav-link px-3" aria-current="page" href="#">Home</a>
+                                <NavLink className="nav-link px-3" to={"/"} aria-current="page">Home</NavLink>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link px-3" href="#">Products</a>
+                                <NavLink className="nav-link px-3" to={"/products"}>Products</NavLink>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link px-3 me-5" href="#">Contact Us</a>
+                                <NavLink className="nav-link px-3 me-5" to={"/contact-us"}>Contact Us</NavLink>
                             </li>
                         </ul>
                     </div>

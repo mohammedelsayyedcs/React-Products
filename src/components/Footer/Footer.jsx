@@ -24,6 +24,11 @@ export default function Footer() {
                             Contact Us
                         </NavLink>
                     </li>
+                    <li className="nav-item px-3">
+                        <NavLink className="nav-link" to={"/about-us"}>
+                            About Us
+                        </NavLink>
+                    </li>
                 </ul>
                 <p className="text-center text-body-secondary">© 2025 Products Project, Inc</p>
             </footer>

@@ -20,7 +20,10 @@ export default function Header() {
                                 <NavLink className="nav-link px-3" to={"/products"}>Products</NavLink>
                             </li>
                             <li className="nav-item">
-                                <NavLink className="nav-link px-3 me-5" to={"/contact-us"}>Contact Us</NavLink>
+                                <NavLink className="nav-link px-3" to={"/contact-us"}>Contact Us</NavLink>
+                            </li>
+                            <li className="nav-item">
+                                <NavLink className="nav-link px-3 me-5" to={"/about-us"}>About Us</NavLink>
                             </li>
                         </ul>
                     </div>

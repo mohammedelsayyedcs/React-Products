@@ -1,13 +1,17 @@
 import React, { useState } from 'react'
 import './Home.css'
+import { useNavigate } from 'react-router-dom';
 
 export default function Home(props) {
     const [user, setUser] = useState({ name: 'Mohamed', balance: 400 });
     let [age, setAge] = useState(20);
+    const navTo = useNavigate();
 
     // Methods
     const increaseAge = () => {
-        setAge(++age)
+        setAge(++age);
+        // Go to another page based on condition (useNavigate) like redirect
+        age > 25 ? navTo('about-us') : "";
     }
 
     const increaseBalance = (val) => {

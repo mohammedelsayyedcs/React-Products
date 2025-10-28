@@ -23,7 +23,7 @@ export default function Products() {
   return (
     <div className='body row container mx-auto'>
 
-      {cards};
+      {cards}
 
     </div>
   )

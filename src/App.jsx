@@ -10,6 +10,8 @@ import Contact from './components/Contact/Contact.jsx'
 import Products from './components/Products/Products.jsx'
 import NotFound from './components/NotFound/NotFound.jsx'
 import About from './components/About/About.jsx'
+import Mission from './components/Mission/Mission.jsx'
+import Vision from './components/Vision/Vision.jsx'
 
 
 function App() {
@@ -18,11 +20,15 @@ function App() {
     <>
       <Header />
       <Routes>
-        <Route path='/' element={<Home name={'Mohamed'} increaseVal={500} />}></Route>
-        <Route path='/products' element={<Products />}></Route>
-        <Route path='/contact-us' element={<Contact />}></Route>
-        <Route path='/about-us' element={<About />}></Route>
-        <Route path='*' element={<NotFound />}></Route>
+        <Route path='/' element={<Home name={'Mohamed'} increaseVal={500} />} />
+        <Route path='/products' element={<Products />} />
+        <Route path='/contact-us' element={<Contact />} />
+        <Route path='/about-us' element={<About />}>
+          <Route index element={<Mission />} />
+          <Route path='mission' element={<Mission />} />
+          <Route path='vision' element={<Vision />} />
+        </Route>
+        <Route path='*' element={<NotFound />} />
       </Routes>
       <Footer />
     </>

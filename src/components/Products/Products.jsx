@@ -15,9 +15,7 @@ export default function Products() {
           <a href="#" class="btn btn-primary">Go somewhere</a>
         </div>
       </div>
-
     )
-
   }
 
   return (

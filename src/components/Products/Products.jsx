@@ -5,14 +5,13 @@ import { Outlet } from 'react-router-dom'
 
 export default function Products() {
   return (
-    <div className='body row'>
+    <div className='row'>
       <div className='col-2'>
         <Sidebar />
       </div>
       <div className='col-10 container row mx-auto'>
         <Outlet/>
       </div>
-
     </div>
   )
 }

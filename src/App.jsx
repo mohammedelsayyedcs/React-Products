@@ -13,6 +13,7 @@ import About from './components/About/About.jsx'
 import Mission from './components/Mission/Mission.jsx'
 import Vision from './components/Vision/Vision.jsx'
 import Main from './components/Main/Main.jsx'
+import ProductDetails from './components/ProductDetails/ProductDetails.jsx'
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home name={'Mohamed'} increaseVal={500} />} />
         <Route path='/products' element={<Products />} />
+        <Route path='/products/:pId' element={<ProductDetails />} />
         <Route path='/contact-us' element={<Contact />} />
         <Route path='/about-us' element={<About />}>
           <Route index element={<Mission />} />

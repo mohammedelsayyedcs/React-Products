@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import './Products.css'
 import axios from 'axios';
+import Product from '../Product/Product';
 
 export default function Products() {
   // Set Variable to store products
@@ -21,12 +22,10 @@ export default function Products() {
   useEffect(() => { getProducts('https://fakestoreapi.com/products') }, [])
 
   return (
-    <div className='body'>
-      <ol>
-        {products.map((item) => {
-          return <li key={item.id}>{item.title}</li>
-        })}
-      </ol>
+    <div className='body row container mx-auto'>
+      {products.map((item) => {
+        return <Product key={item.id} obj={item} />
+      })}
     </div>
   )
 }

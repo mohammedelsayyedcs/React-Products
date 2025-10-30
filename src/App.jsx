@@ -22,12 +22,7 @@ function App() {
       <Header />
       <Routes>
         <Route path='/' element={<Home name={'Mohamed'} increaseVal={500} />} />
-        <Route path='/products' element={<Products />} >
-          <Route path="mission" element={<Mission />} />
-          <Route path="vision" element={<Vision />} />
-          <Route index element={<Main />} />
-          <Route path="main" element={<Main />} />
-        </Route>
+        <Route path='/products' element={<Products />} />
         <Route path='/contact-us' element={<Contact />} />
         <Route path='/about-us' element={<About />}>
           <Route index element={<Mission />} />

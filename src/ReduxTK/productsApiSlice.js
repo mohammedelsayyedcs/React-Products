@@ -14,7 +14,15 @@ export const productsApiSlice = createApi({
             query: (id) => `products/${id}`,
             providesTags: ['products'],
         }),
+        addProduct: builder.mutation({
+            query: (productObj) => ({
+                url: 'products',
+                method: 'POST',
+                body: productObj,
+            }),
+            invalidatesTags: ['products'],
+        })
     })
 })
 
-export const { useGetAllProductsQuery, useGetProductByIdQuery } = productsApiSlice;
+export const { useGetAllProductsQuery, useGetProductByIdQuery, useAddProductMutation } = productsApiSlice;

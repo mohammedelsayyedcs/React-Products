@@ -9,8 +9,12 @@ export const productsApiSlice = createApi({
         getAllProducts: builder.query({
             query: () => 'products',    // https://fakestoreapi.com/products
             providesTags: ['products'],
-        })
+        }),
+        getProductById: builder.query({
+            query: (id) => `products/${id}`,
+            providesTags: ['products'],
+        }),
     })
 })
 
-export const { useGetAllProductsQuery } = productsApiSlice;
+export const { useGetAllProductsQuery, useGetProductByIdQuery } = productsApiSlice;

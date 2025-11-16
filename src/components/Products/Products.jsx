@@ -3,6 +3,7 @@ import './Products.css'
 import axios from 'axios';
 import Product from '../Product/Product';
 import { useGetAllProductsQuery } from '../../ReduxTK/productsApiSlice';
+import Loading from '../Loading/Loading';
 
 export default function Products() {
   ////////////////////////////////////
@@ -18,7 +19,6 @@ export default function Products() {
   //     setProducts(res.data)
   //   } catch (error) {
   //     console.log(error);
-
   //   }
   // }
 
@@ -26,8 +26,8 @@ export default function Products() {
   // useEffect(() => { getProducts('https://fakestoreapi.com/products') }, [])
 
   const { data, error, isLoading } = useGetAllProductsQuery();
-  if (error) return <h3>error</h3>
-  if (isLoading) return <h3>Loading...</h3>
+  if (error) return <h3 className='text-danger'>{error}</h3>
+  if (isLoading) return <Loading />
 
   return (
     <div className='body row container mx-auto'>

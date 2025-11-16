@@ -20,6 +20,11 @@ export default function Footer() {
                         </NavLink>
                     </li>
                     <li className="nav-item px-3">
+                        <NavLink className="nav-link" to={"/add-product"}>
+                            Add Product
+                        </NavLink>
+                    </li>
+                    <li className="nav-item px-3">
                         <NavLink className="nav-link" to={"/contact-us"}>
                             Contact Us
                         </NavLink>

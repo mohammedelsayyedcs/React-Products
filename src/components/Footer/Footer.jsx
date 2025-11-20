@@ -1,8 +1,10 @@
 import React from "react";
 import "./Footer.css";
 import { NavLink } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 export default function Footer() {
+    const { t } = useTranslation()
     return (
         <div>
             <footer className="footer py-3 my-4">
@@ -11,31 +13,31 @@ export default function Footer() {
 
                     <li className="nav-item px-3">
                         <NavLink className="nav-link" to={"/"}>
-                            Home
+                            {t("home")}
                         </NavLink>
                     </li>
                     <li className="nav-item px-3">
                         <NavLink className="nav-link" to={"/products"}>
-                            Products
+                            {t("products")}
                         </NavLink>
                     </li>
                     <li className="nav-item px-3">
                         <NavLink className="nav-link" to={"/add-product"}>
-                            Add Product
+                            {t("add_product")}
                         </NavLink>
                     </li>
                     <li className="nav-item px-3">
                         <NavLink className="nav-link" to={"/contact-us"}>
-                            Contact Us
+                            {t("contact")}
                         </NavLink>
                     </li>
                     <li className="nav-item px-3">
                         <NavLink className="nav-link" to={"/about-us"}>
-                            About Us
+                            {t("about")}
                         </NavLink>
                     </li>
                 </ul>
-                <p className="text-center text-body-secondary">© 2025 Products Project, Inc</p>
+                <p className="text-center text-body-secondary">© 2025 {t("products_project")}, Inc</p>
             </footer>
         </div>
     );
